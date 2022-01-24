@@ -1999,7 +1999,7 @@ public:
 		Logger::getLogger().log("Host IP: " + IPaddress, "Setup()");
 		Logger::getLogger().log("Driver version: " + DriverVersion, "Setup()");
 		Logger::getLogger().log("Initializing camera", "Setup()");
-		cam.Init(false);
+		cam.Init();
 		Logger::getLogger().log("Camera Serial:" + cam.GetSerialNumber(), "Setup()");
 		Logger::getLogger().log("Camera FW version:" + cam.GetFwVersion(), "Setup()");
 
@@ -2439,7 +2439,7 @@ public:
 			if (currDepthProfile.fps != 0)
 			{
 				metrics[i]->configure(currDepthProfile, depthFramesList);
-				metrics[i]->_useSystemTs = true;
+				//metrics[i]->_useSystemTs = true;
 				MetricResult r = metrics[i]->calc();
 				if (r.result == false)
 				{
@@ -2469,7 +2469,7 @@ public:
 			if (currIRProfile.fps != 0)
 			{
 				metrics[i]->configure(currIRProfile, irFramesList);
-				metrics[i]->_useSystemTs = true;
+				//metrics[i]->_useSystemTs = true;
 				MetricResult r = metrics[i]->calc();
 				if (r.result == false)
 				{
@@ -2498,7 +2498,6 @@ public:
 			if (currColorProfile.fps != 0)
 			{
 				metrics[i]->configure(currColorProfile, colorFramesList);
-				metrics[i]->_useSystemTs = true;
 				// metrics[i]->_useSystemTs = true;
 				MetricResult r = metrics[i]->calc();
 				if (r.result == false)
