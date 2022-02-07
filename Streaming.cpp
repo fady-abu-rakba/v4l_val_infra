@@ -198,13 +198,13 @@ TEST_F(StreamingTest, DepthStreamingTest)
     run(streams);
 }
 
-TEST_F(StreamingTest, IRStreamingTest)
-{
-    configure(30);
-    vector<StreamType> streams;
-    streams.push_back(StreamType::IR_Stream);
-    run(streams);
-}
+//TEST_F(StreamingTest, IRStreamingTest)
+//{
+//    configure(30);
+//    vector<StreamType> streams;
+//    streams.push_back(StreamType::IR_Stream);
+//    run(streams);
+//}
 TEST_F(StreamingTest, ColorStreamingTest)
 {
     configure(30);
@@ -212,14 +212,14 @@ TEST_F(StreamingTest, ColorStreamingTest)
     streams.push_back(StreamType::Color_Stream);
     run(streams);
 }
-TEST_F(StreamingTest, DepthIRStreamingTest)
-{
-    configure(30);
-    vector<StreamType> streams;
-    streams.push_back(StreamType::IR_Stream);
-    streams.push_back(StreamType::Depth_Stream);
-    run(streams);
-}
+//TEST_F(StreamingTest, DepthIRStreamingTest)
+//{
+//    configure(30);
+//    vector<StreamType> streams;
+//    streams.push_back(StreamType::IR_Stream);
+//    streams.push_back(StreamType::Depth_Stream);
+//    run(streams);
+//}
 TEST_F(StreamingTest, DepthColorStreamingTest)
 {
     configure(30);
@@ -228,23 +228,20 @@ TEST_F(StreamingTest, DepthColorStreamingTest)
     streams.push_back(StreamType::Depth_Stream);
     run(streams);
 }
-TEST_F(StreamingTest, IRColorStreamingTest)
-{
-    configure(10);
-    vector<StreamType> streams;
-    streams.push_back(StreamType::Color_Stream);
-    streams.push_back(StreamType::IR_Stream);
-    run(streams);
-}
-TEST_F(StreamingTest, DepthIRColorStreamingTest)
-{
-    configure(30);
-    vector<StreamType> streams;
-    streams.push_back(StreamType::Color_Stream);
-    streams.push_back(StreamType::Depth_Stream);
-    streams.push_back(StreamType::IR_Stream);
-    run(streams);
-}
-
-
-
+//TEST_F(StreamingTest, IRColorStreamingTest)
+//{
+//    configure(10);
+//    vector<StreamType> streams;
+//    streams.push_back(StreamType::Color_Stream);
+//    streams.push_back(StreamType::IR_Stream);
+//    run(streams);
+//}
+//TEST_F(StreamingTest, DepthIRColorStreamingTest)
+//{
+//    configure(30);
+//    vector<StreamType> streams;
+//    streams.push_back(StreamType::Color_Stream);
+//    streams.push_back(StreamType::Depth_Stream);
+//    streams.push_back(StreamType::IR_Stream);
+//    run(streams);
+//}
