@@ -299,7 +299,7 @@ TEST_F(StabilityTest, Normal)
     vector<vector<StreamType>> streams;
     vector<StreamType> sT;
     sT.push_back(StreamType::Depth_Stream);
-    sT.push_back(StreamType::IR_Stream);
+    //sT.push_back(StreamType::IR_Stream);
     sT.push_back(StreamType::Color_Stream);
 
     //vector<StreamType> sT2;
@@ -313,37 +313,40 @@ TEST_F(StabilityTest, Normal)
 TEST_F(StabilityTest, Random)
 {
     vector<vector<StreamType>> streams;
+    
     vector<StreamType> sT;
     sT.push_back(StreamType::Depth_Stream);
+    
     vector<StreamType> sT2;
     sT2.push_back(StreamType::Color_Stream);
+    
     vector<StreamType> sT3;
     sT3.push_back(StreamType::IR_Stream);
+    
     vector<StreamType> sT4;
     sT4.push_back(StreamType::Depth_Stream);
     sT4.push_back(StreamType::IR_Stream);
     sT4.push_back(StreamType::Color_Stream);
+    
     vector<StreamType> sT5;
     sT5.push_back(StreamType::Depth_Stream);
     sT5.push_back(StreamType::IR_Stream);
-    //sT5.push_back(StreamType::Color_Stream);
+    
     vector<StreamType> sT6;
     sT6.push_back(StreamType::Depth_Stream);
-    //sT6.push_back(StreamType::IR_Stream);
     sT6.push_back(StreamType::Color_Stream);
 
     vector<StreamType> sT7;
-    //sT7.push_back(StreamType::Depth_Stream);
     sT7.push_back(StreamType::IR_Stream);
     sT7.push_back(StreamType::Color_Stream);
 
     streams.push_back(sT);
     streams.push_back(sT2);
-    streams.push_back(sT3);
-    streams.push_back(sT4);
-    streams.push_back(sT5);
+    //streams.push_back(sT3);
+    //streams.push_back(sT4);
+    //streams.push_back(sT5);
     streams.push_back(sT6);
-    streams.push_back(sT7);
+    //streams.push_back(sT7);
 
     configure(30, 1500, true);
     run(streams);
@@ -361,15 +364,20 @@ TEST_F(StabilityTest, ContentRandom)
     IgnoreMetricAllStreams("ID Correctness");
 
     vector<vector<StreamType>> streams;
+    
     vector<StreamType> sT;
     sT.push_back(StreamType::Depth_Stream);
+    
     vector<StreamType> sT2;
     sT2.push_back(StreamType::Color_Stream);
+    
     vector<StreamType> sT3;
     sT3.push_back(StreamType::IR_Stream);
+    
     vector<StreamType> sT4;
     sT4.push_back(StreamType::Depth_Stream);
     sT4.push_back(StreamType::Color_Stream);
+    
     vector<StreamType> sT5;
     sT5.push_back(StreamType::Depth_Stream);
     sT5.push_back(StreamType::IR_Stream);
@@ -378,7 +386,7 @@ TEST_F(StabilityTest, ContentRandom)
 
     streams.push_back(sT);
     streams.push_back(sT2);
-    streams.push_back(sT3);
+//     streams.push_back(sT3);
     streams.push_back(sT4);
     // streams.push_back(sT5);
 
@@ -389,37 +397,40 @@ TEST_F(StabilityTest, ContentRandom)
 TEST_F(StabilityTest, PnpRandom)
 {
     vector<vector<StreamType>> streams;
+    
     vector<StreamType> sT;
     sT.push_back(StreamType::Depth_Stream);
+    
     vector<StreamType> sT2;
     sT2.push_back(StreamType::Color_Stream);
+    
     vector<StreamType> sT3;
     sT3.push_back(StreamType::IR_Stream);
+    
     vector<StreamType> sT4;
     sT4.push_back(StreamType::Depth_Stream);
     sT4.push_back(StreamType::IR_Stream);
     sT4.push_back(StreamType::Color_Stream);
+    
     vector<StreamType> sT5;
     sT5.push_back(StreamType::Depth_Stream);
     sT5.push_back(StreamType::IR_Stream);
-    //sT5.push_back(StreamType::Color_Stream);
+
     vector<StreamType> sT6;
     sT6.push_back(StreamType::Depth_Stream);
-    //sT6.push_back(StreamType::IR_Stream);
     sT6.push_back(StreamType::Color_Stream);
 
     vector<StreamType> sT7;
-    //sT7.push_back(StreamType::Depth_Stream);
     sT7.push_back(StreamType::IR_Stream);
     sT7.push_back(StreamType::Color_Stream);
 
     streams.push_back(sT);
     streams.push_back(sT2);
-    streams.push_back(sT3);
-    streams.push_back(sT4);
-    streams.push_back(sT5);
+    //streams.push_back(sT3);
+    //streams.push_back(sT4);
+    //streams.push_back(sT5);
     streams.push_back(sT6);
-    streams.push_back(sT7);
+    //streams.push_back(sT7);
     configure(30, 1500, true);
     runWithPNP(streams);
 }
